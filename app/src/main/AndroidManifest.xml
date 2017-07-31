@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Aty_Xb_FristOne">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Aty_Xb_Bigteacher"></activity>
+        <activity android:name=".Aty_Xb_Enroll"></activity>
+        <activity android:name=".Aty_Xb_Forgetpwd"></activity>
+        <activity android:name=".Aty_Xb_Residue"></activity>
+        <activity android:name=".Aty_Xb_Deposit"></activity>
+        <activity android:name=".Aty_Xb_Addbank"></activity>
     </application>
 
 </manifest>

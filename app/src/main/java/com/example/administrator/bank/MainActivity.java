@@ -1,7 +1,6 @@
 package com.example.administrator.bank;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -9,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,20 +21,26 @@ public class MainActivity extends AppCompatActivity {
     private List<Bank> list;
     private long fristTime=0;
     private Button add;
+    private ImageView iv_xbadd_bank;
+    private String bankcardid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.bankitem);
+        Intent intent = getIntent();
+
         add= (Button) findViewById(R.id.btadd);
         listView= (ListView) findViewById(R.id.lv);
+        iv_xbadd_bank= (ImageView) findViewById(R.id.ivmain_xbadd_bank);
         list=new ArrayList<Bank>();
-        for (int i = 0; i <10 ; i++) {
+
+        for (int i = 0; i <1 ; i++) {
             Random random=new Random();
             int i1 = random.nextInt(9);
-            Bank bank=new Bank();
-            bank.setIdCard("1001 1252 1001 2318 254"+i1);
-            list.add(bank);
+            Bank bank1=new Bank();
+            bank1.setIdCard("1001 1252 1001 2318 254"+i1);
+            list.add(bank1);
         }
 
 
@@ -63,10 +69,16 @@ public class MainActivity extends AppCompatActivity {
                 listView.setAdapter(bankBaseAdapter);
             }
         });
+        iv_xbadd_bank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Aty_Xb_Addbank.class));
+            }
+        });
 
     }
 
-    @Override
+  /*  @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode==KeyEvent.KEYCODE_BACK){
             long secondTime = System.currentTimeMillis();
@@ -81,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.onKeyDown(keyCode, event);
-    }
+    }*/
 
    /* @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {

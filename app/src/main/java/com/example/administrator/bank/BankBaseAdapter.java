@@ -53,6 +53,7 @@ public class BankBaseAdapter extends BaseAdapter {
             myviewHorld= (MyviewHorld) view.getTag();
             Bank bank = list.get(poss);
             myviewHorld.textView.setText(bank.getIdCard().toString());
+
         }
 
         myviewHorld.fm.setOnClickListener(new View.OnClickListener() {

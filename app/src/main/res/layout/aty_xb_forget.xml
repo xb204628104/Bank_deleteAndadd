@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f6f5ea">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/ivforget_xb_back"
+            android:layout_width="20dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/back" />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="忘记密码"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="80dp"
+        android:textCursorDrawable="@null"
+        android:id="@+id/etforget_xb_phonenum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:hint="请输入手机号"
+        android:textSize="15dp"
+        android:textColorHint="#5c000000">
+    </EditText>
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btforget_xb_get_yanzhengme"
+            android:layout_marginBottom="1dp"
+
+            android:textSize="12sp"
+            android:background="@drawable/shape_xb_yanzhengma"
+            android:layout_marginRight="40dp"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="获取验证码"
+            android:textColor="#ff0000"
+            android:layout_gravity="right"
+            />
+
+        <EditText
+            android:textCursorDrawable="@null"
+            android:id="@+id/etforget_xb_phone_yanzhengma"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:hint="请输入验证码"
+            android:textSize="15sp"
+            android:textColorHint="#5c000000">
+        </EditText>
+    </FrameLayout>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textCursorDrawable="@null"
+        android:id="@+id/etforget_xb_phone_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:hint="输入密码,至少6位"
+        android:textSize="15sp"
+        android:textColorHint="#5c000000">
+    </EditText>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textCursorDrawable="@null"
+        android:id="@+id/etforget_xb_phone_againpwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:hint="重复密码"
+        android:textSize="15sp"
+        android:textColorHint="#5c000000">
+    </EditText>
+
+    <Button
+        android:id="@+id/btforget_xb_login"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="完成"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:background="@drawable/shape_xb_login" />
+
+
+</LinearLayout>
